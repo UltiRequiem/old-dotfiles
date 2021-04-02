@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias ll='ls -alf'
 alias la='la -A'
 alias l='ls -CF'
@@ -11,4 +13,6 @@ alias pyv="source env/bin/activate"
 alias ms='sudo mysql -u root -h localhost -p'
 
 alias rep='cd ~/Disk/Repos'
+alias dl="cd ~/Downloads"
 
+alias reload="exec ${SHELL} -l"
