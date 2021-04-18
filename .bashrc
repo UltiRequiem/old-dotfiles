@@ -66,3 +66,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Gotham Shell
+GOTHAM_SHELL="$HOME/.config/gotham/gotham.sh"
+[[ -s $GOTHAM_SHELL ]] && source $GOTHAM_SHELL
