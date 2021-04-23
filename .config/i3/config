@@ -166,6 +166,9 @@ gaps outer 7
 gaps inner 6
 smart_gaps on
 
+# Screnshots
+bindsym Print exec gnome-screenshot -i
+
 # No Tittles
 for_window [class="^.*"] border pixel 3
 
