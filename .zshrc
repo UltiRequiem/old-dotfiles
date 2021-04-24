@@ -20,6 +20,8 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
+_Z_DATA="$HOME/.cache/z"
+
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
 else

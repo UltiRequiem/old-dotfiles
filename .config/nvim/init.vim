@@ -39,7 +39,6 @@ set ruler
 set wildmenu
 set spelllang=en_us
 
-
 if !&scrolloff
   set scrolloff=1
 endif
@@ -137,6 +136,8 @@ nnoremap <silent> p p`]
 " Prevent common mistake of pressing q: instead :q
 map q: :q
 map w: :w
+map :Q :q
+map :W :w
 
 " Disable writebackup because coc.nvim have issues with it
 set nowritebackup

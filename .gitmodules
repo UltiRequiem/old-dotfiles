@@ -1,0 +1,30 @@
+[submodule ".config/nvim/pack/general/start/coc.nvim"]
+	path = .config/nvim/pack/general/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule ".config/nvim/pack/aesthetic/start/vim-airline"]
+	path = .config/nvim/pack/aesthetic/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".config/nvim/pack/aesthetic/start/vim-airline-themes"]
+	path = .config/nvim/pack/aesthetic/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule ".config/nvim/pack/aesthetic/start/vim-devicons"]
+	path = .config/nvim/pack/aesthetic/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule ".config/nvim/pack/general/start/ctrlp.vim"]
+	path = .config/nvim/pack/general/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule ".config/nvim/pack/general/start/vim-gitgutter"]
+	path = .config/nvim/pack/general/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule ".config/nvim/pack/general/start/nerdtree"]
+	path = .config/nvim/pack/general/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule ".config/nvim/pack/language-support/start/vim-go"]
+	path = .config/nvim/pack/language-support/start/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule ".config/nvim/pack/general/start/vim-fugitive"]
+	path = .config/nvim/pack/general/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".config/nvim/pack/aesthetic/start/vim-nerdtree-syntax-highlight"]
+	path = .config/nvim/pack/aesthetic/start/vim-nerdtree-syntax-highlight
+	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
