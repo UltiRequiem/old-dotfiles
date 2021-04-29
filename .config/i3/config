@@ -6,8 +6,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id nm-applet
 
-
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -77,16 +75,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminal "
-set $ws2 "2: Brave "
-set $ws3 "3: Chrome "
-set $ws4 "4: NeoVim "
-set $ws5 "5: File Explorer "
+set $ws1 "1: Terminal  "
+set $ws2 "2: Brave  "
+set $ws3 "3: Chrome  "
+set $ws4 "4: NeoVim  "
+set $ws5 "5: File Explorer  "
 set $ws6 "6: Second Brave "
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "0"
+set $ws7 "7: Second Chrome  "
+set $ws8 "8: Meetings "
+set $ws9 "9: Extra / Hell Spawn  "
+set $ws10 "10: Music  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -161,13 +159,18 @@ bar {
 	}
 }
 
+
+
 # Cool Gaps
 gaps outer 7
 gaps inner 6
 smart_gaps on
-
+smart_borders on
 # Screnshots
 bindsym Print exec gnome-screenshot -i
+
+# Lockscreen
+bindsym $mod+p exec "~/.config/i3/lock -i ~/Disk/Sabare/Wallpapers/015.png"
 
 # No Tittles
 for_window [class="^.*"] border pixel 3
@@ -180,11 +183,13 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 client.focused #bf7500 #bf7500 #bf7500 #ffe570
 
 # Set Wallpapers
-exec_always "feh --bg-fill ~/Disk/Wallpapers"
+exec_always "feh --bg-fill ~/Disk/Sabare/Wallpapers"
+
+# I3 Fibonnaci
+exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
 
 # Set my keyboard
 exec_always setxkbmap -layout latam
-
 # Picom
 exec_always picom -b -f
 
