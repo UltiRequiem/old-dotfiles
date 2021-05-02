@@ -28,3 +28,8 @@ bspc config focused_border_color '#87CEEBC'
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+
+# More Stuff
+setxkbmap -layout latam
+picom -b -f
+feh --bg-fill ~/Disk/Sabare/Wallpapers/cool.jpg
