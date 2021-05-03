@@ -1,4 +1,3 @@
 # My dotfiles
-Archlinux with bspwm
-
-![Screenshot](https://i.imgur.com/gM650gA.png)
+Archlinux with bspwm.
+![Screenshot](https://i.imgur.com/dCf3fC0.png)
