@@ -119,3 +119,13 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
 	brightnessctl set 2%-
+
+#Screenshot
+ctrl+shift+Print
+	flameshot gui
+	
+Print
+	flameshot full -c
+	
+ctrl+alt+Print
+	flameshot screen -c
