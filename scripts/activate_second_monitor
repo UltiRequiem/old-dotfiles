@@ -2,13 +2,21 @@
 
 import os
 
-principal_monitor_type = "eDP1"
-second_monitor_type = "HDMI1"
-side = "right"
+class Monitor():
+    def __init__(self, principal_monitor_type,second_monitor_type,side):
+        self.principal_monitor_type = principal_monitor_type
+        self.second_monitor_type = second_monitor_type
+        self.side = side
+        
 
-def is_conected():
-    output = os.popen(f"xrandr --query | grep {second_monitor_type}").read()
-    return "connected" in output
+    def is_conected(self):
+        output = os.popen(f"xrandr --query | grep {self.second_monitor_type}").read()
+        return "connected" in output
 
-if is_conected() == True:
-    os.system(f" xrandr --output {second_monitor_type} --auto --{side}-of {principal_monitor_type}")
+    def activate(self):
+        os.system(f" xrandr --output {self.second_monitor_type} --auto --{self.side}-of {self.principal_monitor_type}")
+
+if __name__ == "__name__":
+    my_monitor = Monitor("eDP1","HDMI1","rigth")
+    if my_monitor.is_conected() == True:
+        my_monitor.activate()
