@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import os
+import random
+import time
+
+#####################################
+wallpapers_path = "~/Disk/Sabare/Wallpapers/" # An "/" at the final is required
+time_to_change = 900 # 15 Minutes
+#####################################
+
+list_of_wallpapers = os.popen(f"ls {wallpapers_path}").read().split()
+
+while True:
+    image = random.choice(list_of_wallpapers)
+    os.system(f"feh --bg-fill {wallpapers_path}"+image)
+    time.sleep(time_to_change)
