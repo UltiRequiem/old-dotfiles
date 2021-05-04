@@ -1,0 +1,14 @@
+#!/bin/python
+
+import os
+
+principal_monitor_type = "eDP1"
+second_monitor_type = "HDMI1"
+side = "right"
+
+def is_conected():
+    output = os.popen(f"xrandr --query | grep {second_monitor_type}").read()
+    return "connected" in output
+
+if is_conected() == True:
+    os.system(f" xrandr --output {second_monitor_type} --auto --{side}-of {principal_monitor_type}")
