@@ -7,10 +7,9 @@ class Monitor():
         self.principal_monitor_type = principal_monitor_type
         self.second_monitor_type = second_monitor_type
         self.side = side
-        self.connected = "connected"
 
     def is_conected(self):
-        return self.connected in os.popen(f"xrandr --query | grep {self.second_monitor_type}").read()
+        return "connected" in os.popen(f"xrandr --query | grep {self.second_monitor_type}").read()
 
     def activate(self):
         os.system(f" xrandr --output {self.second_monitor_type} --auto --{self.side}-of {self.principal_monitor_type}")
