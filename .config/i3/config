@@ -96,9 +96,9 @@ bar {
     font pango:Inxonsolata 10
 
     status_command /usr/bin/bumblebee-status \
-            -m cpu memory battery date time \
+            -m pasink battery date time \
             -t solarized-powerline \
-	    -p time.format="%H:%M"
+	    -p time.format="%H:%M" date.format="%A %e %b"
 
     colors {
 	   background #282C34
