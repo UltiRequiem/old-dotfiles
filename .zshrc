@@ -2,6 +2,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.config/oh-my-zsh"
 
+export PATH=$PATH:~/scripts
+
 ZSH_THEME="robbyrussell"
 
 HYPHEN_INSENSITIVE="true"
