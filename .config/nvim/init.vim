@@ -15,17 +15,11 @@ let mapleader = ' '
 nmap <Leader>w :w<CR> " Fast Saving
 nmap <Leader>q :q<CR> " Exit
 nmap <Leader>qq :q!<CR> " Fast exit
+nmap <Leader>tt :t.<CR> " Duplicate Line
 
 map <C-N> :bnext<CR>
 map <C-M> :bprev<CR>
 
-" Disable Vi defaults.
-if &compatible
-  " `:set nocompatible` has many side effects. Therefore this should be done only when 'compatible' is set.
-  set nocompatible
-endif
-" Set utf-8 encoding
-set encoding=utf-8
 "Show line numbers on the sidebar
 set relativenumber number
 " Autoindent when starting new line
@@ -37,41 +31,14 @@ set laststatus=2
 " Show the line and column number of the cursor position.
 set ruler
 set wildmenu
-set spelllang=en_us
 
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-
-" Reload unchanged files automatically.
-set autoread
 " When 'wrap' is on, display last line even if it doesn't fit.
 set display+=lastline
 " Delete comment character when joining commented lines
 set formatoptions+=j
 
-" Increase history size to 1000 items.
-if &history < 1000
-  set history=1000
-endif
-
-" Allow for up to 50 opened tabs on Vim start.
-if &tabpagemax < 50
-  set tabpagemax=50
-endif
-
-" Always save upper case variables to viminfo file.
-if !empty(&viminfo)
-  set viminfo^=!
-endif
-
 " Improve displayed color if supported by terminal
-if &t_Co >= 256
-  set termguicolors
-end
+set termguicolors
 
 " Hide buffers instead of asking if to save them.
 set hidden
@@ -122,9 +89,6 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
 
-" Set window title by default.
-set title
-
 " Always focus on splited window.
 set splitright
 set splitbelow
@@ -151,11 +115,7 @@ au CursorHold * checktime
 
 " Persist undo history between file editing sessions.
 set undofile
-if has('nvim')
-   set undodir=$HOME/.config/nvim/undodir 
-elseif has('vim')
-   set undodir=~/.vim/undodir
-endif
+set undodir=$HOME/.config/nvim/undodir 
 
 set guifont=Fira\ Code:h12
 
