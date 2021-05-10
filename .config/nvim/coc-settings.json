@@ -4,9 +4,9 @@
   // Python Stuff
   "python.pythonPath": "/usr/bin/python3",
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.python/black/bin/black",
+  "python.formatting.blackPath": "/usr/bin/black",
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintPath": "~/.python/pylint/bin/pylint",
+  "python.linting.pylintPath": "/usr/bin/pylint",
   // Javascript Stuff
   "eslint.nodePath": "/usr/bin/node",
   "prettier.eslintIntegration": true,
@@ -16,6 +16,7 @@
     "python",
     "json",
     "go",
+    "html",
     "javascript",
     "typescript",
     "markdown"
