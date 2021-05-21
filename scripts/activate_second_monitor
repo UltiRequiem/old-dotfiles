@@ -20,6 +20,6 @@ class Monitor:
 
 
 if __name__ == "__main__":
-    my_second_monitor = Monitor("HDMI1", "right")
+    my_second_monitor = Monitor("HDMI-1", "right")
     if my_second_monitor.is_conected():
         my_second_monitor.activate()

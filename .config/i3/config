@@ -9,7 +9,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 ########## dmenu Stuff ############
-bindsym $mod+d exec --no-startup-id dmenu_run -i -p "Which program will you run?"
+bindsym $mod+o exec --no-startup-id dmenu_run -i -p "Which program will you run?"
+bindsym $mod+d exec --no-startup-id   ~/.config/rofi/launchers/slate/launcher.sh
 bindsym $mod+Shift+x exec ~/scripts/dchoice "Do you want to shutdown?" "shutdown -h now"
 ######################################
 
@@ -48,6 +49,12 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# split in horizontal orientation
+bindsym $mod+m split h
+
+# split in vertical orientation
+bindsym $mod+n split v
 
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -97,7 +104,7 @@ bar {
 
     status_command /usr/bin/bumblebee-status \
             -m pasink battery date time \
-            -t solarized-powerline \
+            -t onedark-powerline \
 	    -p time.format="%H:%M" date.format="%A %e %b"
 
     colors {
@@ -118,7 +125,7 @@ bar {
 
 # No Tittles: Important for Gaps
 for_window [class="^.*"] border pixel 3
-
+for_window [class="^jetbrains-.+" title="win.*"] border none
 # Gaps
 gaps outer 7
 gaps inner 6
@@ -126,6 +133,11 @@ gaps inner 6
 # Audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 2%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 2%-
+
+# Screenshot
+bindsym Print exec flameshot full -c
+bindsym Control+Shift+Print exec flameshot gui
+bindsym Control+Alt+Print exec flameshot screen -c
 
 # Brighness
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-

@@ -1,0 +1,13 @@
+### Example config ###
+[monitor]
+long:1600
+height:900
+
+[wallpaper]
+provider:wallhaven
+local:/home/zero/Disk/Sabare/Wallpapers
+topic:code
+nfsw:false
+
+[misc]
+save:true

@@ -16,7 +16,11 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git)
+plugins=(
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	git
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +31,7 @@ _Z_DATA="$HOME/.cache/z"
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
 else
-   export EDITOR='nano'
+   export EDITOR='vim'
 fi
 
 export ARCHFLAGS="-arch x86_64"

@@ -30,6 +30,5 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # More Stuff
-setxkbmap -layout latam
 picom -b -f
 feh --bg-fill ~/Disk/Sabare/Wallpapers/cool.jpg
