@@ -13,5 +13,6 @@ alias rep='cd ~/Disk/Repos'
 alias dl="cd ~/Downloads"
 
 alias f="ranger"
+alias ls="lsd"
 
 alias reload="exec ${SHELL} -l"
