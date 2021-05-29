@@ -100,7 +100,7 @@ bindsym $mod+r mode "resize"
 
 ########## Bumblebee Status ##########
 bar {
-    font pango:Inxonsolata 10
+    font pango:JetBrains Mono 10
 
     status_command /usr/bin/bumblebee-status \
             -m pasink battery date time \
