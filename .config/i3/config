@@ -9,8 +9,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 ########## dmenu Stuff ############
-bindsym $mod+o exec --no-startup-id dmenu_run -i -p "Which program will you run?"
-bindsym $mod+d exec --no-startup-id   ~/.config/rofi/launchers/slate/launcher.sh
+bindsym $mod+d exec --no-startup-id dmenu_run -i -p "Which program will you run?"
+bindsym $mod+o exec --no-startup-id   ~/.config/rofi/launchers/slate/launcher.sh
 bindsym $mod+Shift+x exec ~/scripts/dchoice "Do you want to shutdown?" "shutdown -h now"
 ######################################
 
@@ -100,7 +100,7 @@ bindsym $mod+r mode "resize"
 
 ########## Bumblebee Status ##########
 bar {
-    font pango:JetBrains Mono 10
+    font pango:JetBrains Mono 9
 
     status_command /usr/bin/bumblebee-status \
             -m pasink battery date time \
