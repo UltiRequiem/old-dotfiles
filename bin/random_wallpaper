@@ -12,3 +12,5 @@ list_of_wallpapers = os.popen(f"ls {wallpapers_path}").read().split()
 if __name__ == "__main__":
     image = random.choice(list_of_wallpapers)
     os.system(f"feh --bg-fill {wallpapers_path}{image}")
+
+# https://github.com/UltiRequiem/wallger
