@@ -1,10 +1,10 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-export ZSH="$HOME/.config/oh-my-zsh"
-
-export PATH=$PATH:~/scripts
+export ZSH="/home/mirai/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
+
+ZSH_THEME="robbyrussell"
+
+export PATH=$PATH:~/scripts
 
 HYPHEN_INSENSITIVE="true"
 
@@ -17,21 +17,23 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
-	zsh-autosuggestions
-	zsh-syntax-highlighting
 	git
-	)
-
-source $ZSH/oh-my-zsh.sh
+	zsh-z
+        zsh-syntax-highlighting
+        zsh-autosuggestions
+)
 
 export LANG=en_US.UTF-8
 
-_Z_DATA="$HOME/.cache/z"
-
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
-else
-   export EDITOR='vim'
+	   export EDITOR='nvim'
+   else
+	      export EDITOR='vim'
 fi
 
 export ARCHFLAGS="-arch x86_64"
+
+source $ZSH/oh-my-zsh.sh
+
+export PATH=$PATH:$(go env GOPATH)/bin
+ export GOPATH=$(go env GOPATH)
