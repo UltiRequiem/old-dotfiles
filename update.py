@@ -4,7 +4,7 @@ from os import listxattr, system
 from datetime import date
 
 list_of_files = ["~/bin/*","~/.zshrc","~/.xinitrc","~/.vimrc","~/.gitconfig"]
-list_of_destination = ["bin","./.zshrc","./.xinitrc","./.vimrc","./.gitconfig"]
+list_of_destination = ["bin/","./.zshrc","./.xinitrc","./.vimrc","./.gitconfig"]
 
 
 def update_files(list_of_files,list_of_destination):
