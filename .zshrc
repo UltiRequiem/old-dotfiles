@@ -23,6 +23,7 @@ plugins=(
 	zsh-z
         zsh-syntax-highlighting
         zsh-autosuggestions
+        command-not-found
 )
 
 export LANG=en_US.UTF-8
@@ -38,4 +39,7 @@ export ARCHFLAGS="-arch x86_64"
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:$(go env GOPATH)/bin
- export GOPATH=$(go env GOPATH)
+export GOPATH=$(go env GOPATH)
+
+source ~/bin/aliases.zsh
+
