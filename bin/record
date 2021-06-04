@@ -1,3 +1,5 @@
 #!/usr/bin/sh
 
 ffmpeg -video_size 1366x768 -framerate 25 -vb 20M -f x11grab -i :0.0+0,0 -f alsa -ac 2 -i pulse -acodec aac -strict experimental output.mp4
+
+# Needs ffmpeg
