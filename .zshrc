@@ -2,6 +2,8 @@ export ZSH="/home/mirai/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
+export PATH=$PATH:~/bin
+
 ZSH_THEME="robbyrussell"
 
 export PATH=$PATH:~/scripts
