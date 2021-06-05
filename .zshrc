@@ -42,4 +42,4 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
 source ~/bin/aliases.zsh
-
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
