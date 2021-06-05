@@ -30,9 +30,11 @@ export LANG=en_US.UTF-8
 
 if [[ -n $SSH_CONNECTION ]]; then
 	   export EDITOR='nvim'
-   else
-	      export EDITOR='vim'
+else
+    export EDITOR='vim'
 fi
+
+export EDITOR='nvim'
 
 export ARCHFLAGS="-arch x86_64"
 
