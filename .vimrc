@@ -1,41 +1,29 @@
-set encoding=utf-8
+" This is not my normal config, these are just a few basic things that I would like to have everywhere.
+" You can check all my config in https://github.com/UltiRequiem/UltiVim
 
-set showmode    
+set nocompatible
+syntax on
 
-syntax enable
-
+" Filetype
 filetype plugin indent on
 
-set lazyredraw
+" Performance
+set complete-=i lazyredraw
 
-set hidden     
+" Indention
+set autoindent expandtab smarttab shiftwidth=4 tabstop=4
 
-set mouse=a  
+" User Interface
+set laststatus=2 ruler wildmenu tabpagemax=20 number relativenumber noerrorbells mouse=a visualbell
 
-set autoread     
+" Code Folding
+set foldmethod=indent foldnestmax=3 nofoldenable 
 
-set autoindent   
+" Search 
+set hlsearch ignorecase incsearch smartcase
 
-set smarttab expandtab 
-set tabstop=2 shiftwidth=2 softtabstop=2
+" Text Rendering
+set display+=lastline encoding=utf-8 linebreak scrolloff=1 sidescrolloff=5 wrap
 
-set history=1000 undolevels=1000 
-
-set number relativenumber
-
-set fileformat=unix   
-
-set wildmode=longest,list,full wildmenu      
-
-set completeopt=menu,menuone,longest
-set cmdheight=1
-
-set ignorecase smartcase 
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-set autochdir
-map <C-E> :Lexplore<CR>
+" Miscellaneous
+set autoread backspace=indent,eol,start confirm formatoptions+=j hidden history=25
