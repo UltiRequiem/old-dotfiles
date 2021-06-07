@@ -1,0 +1,3 @@
+# Arch
+
+pacman -Syu --noconfirm
