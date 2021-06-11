@@ -2,7 +2,7 @@
 
 import os
 
-principal_monitor = os.popen("xrandr --query | grep primary").read().split()[0]
+PRINCIPAL_MONITOR = os.popen("xrandr --query | grep primary").read().split()[0]
 
 
 class Monitor:
@@ -15,7 +15,7 @@ class Monitor:
 
     def activate(self):
         os.system(
-            f" xrandr --output {self.name} --auto --{self.side}-of {principal_monitor}"
+            f" xrandr --output {self.name} --auto --{self.side}-of {PRINCIPAL_MONITOR}"
         )
 
 
