@@ -11,13 +11,13 @@ url = f"https://source.unsplash.com/random/{monitor_long}x{monitor_height}"
 file_name = "random.jpg"
 
 
-def download(url, file_name):
+def download(url, file_name) -> None:
     with open(file_name, "wb") as file:
         response = get(url)
         file.write(response.content)
 
 
-def setup(pathtofile):
+def setup(pathtofile) -> None:
     name_of_file = pathtofile
     path_to_file = os.path.join(os.getcwd(), name_of_file)
     os.system(f"feh --bg-fill {path_to_file}")

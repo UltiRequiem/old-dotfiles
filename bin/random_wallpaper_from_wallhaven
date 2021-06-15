@@ -13,13 +13,13 @@ url = f"https://wallhaven.cc/api/v1/search?q={topic}&atleast={monitor_long}x{mon
 file_name = "random.jpg"
 
 
-def download(url, file_name):
+def download(url, file_name) -> None:
     with open(file_name, "wb") as file:
         response = get(url)
         file.write(response.content)
 
 
-def get_image_link(json_url: str):
+def get_image_link(json_url: str) -> str:
     """get_image_link.
     :param json_url:
     :type json_url: str
@@ -28,14 +28,14 @@ def get_image_link(json_url: str):
     return select_image(json)
 
 
-def select_image(json):
+def select_image(json) -> None:
     """select_image.
     :param json:
     """
     return json["data"][choice(range(0, len(json["data"])))]["path"]
 
 
-def setup(pathtofile):
+def setup(pathtofile) -> None:
     name_of_file = pathtofile
     path_to_file = os.path.join(os.getcwd(), name_of_file)
     os.system(f"feh --bg-fill {path_to_file}")
