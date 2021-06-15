@@ -10,12 +10,12 @@ class Monitor:
         self.name = name
         self.side = side
 
-    def is_conected(self):
+    def is_conected(self) -> bool:
         return "connected" in os.popen(f"xrandr --query | grep {self.name}").read()
 
-    def activate(self):
+    def activate(self) -> None:
         os.system(
-            f" xrandr --output {self.name} --auto --{self.side}-of {PRINCIPAL_MONITOR}"
+            f"xrandr --output {self.name} --auto --{self.side}-of {PRINCIPAL_MONITOR}"
         )
 
 

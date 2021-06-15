@@ -45,3 +45,5 @@ export GOPATH=$(go env GOPATH)
 
 source ~/bin/aliases.zsh
 #[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+
+eval $(thefuck --alias)
