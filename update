@@ -15,7 +15,7 @@ list_of_destination = [
     "bin/",
     "./.zshrc",
     "./.xinitrc",
-    "./vim/",
+    "vim/",
     "./.gitconfig",
     "./tmux.conf",
 ]
