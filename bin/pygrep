@@ -7,4 +7,4 @@ file = open(argv[2], "r")
 
 for line in file:
     if search(argv[1], line):
-        print(line)
+        print(line.strip())
