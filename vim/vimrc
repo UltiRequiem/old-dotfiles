@@ -1,5 +1,4 @@
-" This is not my normal config, these are just a few basic things that I would like to have everywhere.
-" You can check all my config in https://github.com/UltiRequiem/UltiVim
+" This is not my normal config, you can check all my config in https://github.com/UltiRequiem/UltiVim.
 
 " Needed
 set nocompatible fileformat=unix 
@@ -39,3 +38,9 @@ let mapleader = " "
 noremap <leader>e :Lex<CR>
 
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+call plug#end()

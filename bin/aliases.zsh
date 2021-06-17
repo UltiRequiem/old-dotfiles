@@ -2,6 +2,7 @@ alias qq="exit"
 
 alias py='python3.10'
 alias pyvenv='python3.10 -m venv env;source env/bin/activate'
+alias pyva="python3.10 -m venv env;source env/bin/activate"
 alias pyv="source env/bin/activate"
 
 alias v="nvim"

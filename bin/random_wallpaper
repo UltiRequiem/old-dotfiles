@@ -4,7 +4,7 @@ import os
 import random
 
 #####################################
-wallpapers_path = "~/Disk/Sabare/Wallpapers/"  # An "/" at the final is required
+wallpapers_path = "~/Disk/sabare/Wallpapers/"  # An "/" at the final is required
 #####################################
 
 list_of_wallpapers = os.popen(f"ls {wallpapers_path}").read().split()
