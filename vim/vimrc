@@ -38,9 +38,3 @@ let mapleader = " "
 noremap <leader>e :Lex<CR>
 
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-call plug#end()
