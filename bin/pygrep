@@ -3,8 +3,15 @@
 from re import search
 from sys import argv
 
-file = open(argv[2], "r")
 
-for line in file:
-    if search(argv[1], line):
-        print(line.strip())
+def grep(word, file):
+    for line in file:
+        if search(word, line):
+            print(line.strip())
+
+
+if __name__ == "__main__":
+    try:
+        grep(argv[1], open(argv[2]))
+    except:
+        print("That's not a vaild file.")
