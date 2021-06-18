@@ -1,16 +1,16 @@
 #!/usr/bin/python
 
-import os
-import random
+from os import popen, system
+from random import choice
 
-#####################################
-wallpapers_path = "~/Disk/sabare/Wallpapers/"  # An "/" at the final is required
-#####################################
-
-list_of_wallpapers = os.popen(f"ls {wallpapers_path}").read().split()
+PATH = "~/Disk/sabare/Wallpapers/"  # An "/" at the final is required
+WALLPAPERS = popen(f"ls {PATH}").read().split()
 
 if __name__ == "__main__":
-    image = random.choice(list_of_wallpapers)
-    os.system(f"feh --bg-fill {wallpapers_path}{image}")
+    try:
+        system(f"feh --bg-fill {PATH}{choice(WALLPAPERS)}")
+        print("Done!")
+    except:
+        print("Probably you have a 'typo' in the PATH.")
 
 # https://github.com/UltiRequiem/wallger
