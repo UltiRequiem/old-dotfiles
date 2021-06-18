@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-const TODAY = new Date();
-const HOUR = `${TODAY.getHours()}:${TODAY.getMinutes()}:${TODAY.getSeconds()}`;
-const DATE = `${TODAY.getFullYear()}-${
-  TODAY.getMonth() + 1
-}-${TODAY.getDate()}`;
+const NOW = new Date();
 
-console.log(`${DATE} ${HOUR}`);
+console.log(`${NOW.toLocaleDateString()} ${NOW.toLocaleTimeString()}`);
