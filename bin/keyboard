@@ -1,14 +1,14 @@
 #!/bin/python
 
-import os
+from os import popen
 
 
 def get_layout():
-    try:
-        return os.popen("setxkbmap -query").read().split()[5].capitalize()
-    except FileNotFoundError:
-        print("You don't have 'setxkbmap' command.")
+    return popen("setxkbmap -query").read().split()[5].capitalize()
 
 
 if __name__ == "__main__":
-    print(f"Your keyboard distribution is: {get_layout()}.")
+    try:
+        print(f"Your keyboard distribution is: {get_layout()}.")
+    except Exception as exception:
+        print(f"Oops!, {exception} ocurred.")
