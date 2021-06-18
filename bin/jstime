@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const TODAY = new Date();
+const HOUR = `${TODAY.getHours()}:${TODAY.getMinutes()}:${TODAY.getSeconds()}`;
+const DATE = `${TODAY.getFullYear()}-${
+  TODAY.getMonth() + 1
+}-${TODAY.getDate()}`;
+
+console.log(`${DATE} ${HOUR}`);
