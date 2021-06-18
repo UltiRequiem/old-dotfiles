@@ -2,7 +2,13 @@
 
 import os
 
-KEY_LAYOUT = os.popen("setxkbmap -query").read().split()[5]
+
+def get_layout():
+    try:
+        return os.popen("setxkbmap -query").read().split()[5].capitalize()
+    except FileNotFoundError:
+        print("You don't have 'setxkbmap' command.")
+
 
 if __name__ == "__main__":
-    print(f"Your keyboard distribution is: {KEY_LAYOUT}")
+    print(f"Your keyboard distribution is: {get_layout()}.")
