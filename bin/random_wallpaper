@@ -3,7 +3,7 @@
 from os import popen, system
 from random import choice
 
-PATH = "~/Disk/sabare/Wallpapers/"  # An "/" at the final is required
+PATH = "~/disk/sabare/all/"  # An "/" at the final is required
 WALLPAPERS = popen(f"ls {PATH}").read().split()
 
 if __name__ == "__main__":
