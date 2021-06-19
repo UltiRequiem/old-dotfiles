@@ -11,6 +11,7 @@ list_of_files = [
     "~/.gitconfig",
     "~/.tmux.conf",
 ]
+
 list_of_destination = [
     "bin/",
     "./zshrc",
