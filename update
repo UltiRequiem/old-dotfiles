@@ -13,10 +13,10 @@ list_of_files = [
 ]
 list_of_destination = [
     "bin/",
-    "./.zshrc",
-    "./.xinitrc",
+    "./zshrc",
+    "./xinitrc",
     "vim/",
-    "./.gitconfig",
+    "./gitconfig",
     "./tmux.conf",
 ]
 

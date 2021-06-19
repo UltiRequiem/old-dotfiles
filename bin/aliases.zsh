@@ -10,8 +10,8 @@ alias va="nvim ."
 
 alias vi="vim"
 
-alias rp='cd ~/Disk/Repos'
-alias dl="cd ~/Downloads"
+alias rp='cd ~/disk/Repos'
+alias dl="cd ~/downloads"
 
 alias f="ranger"
 alias l="lsd -l"
