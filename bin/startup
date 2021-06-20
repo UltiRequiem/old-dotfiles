@@ -7,4 +7,4 @@ picom -b -f
 ~/bin/random_wallpaper
 
 # Terminal Emulator
-alacritty --command navi
+alacritty

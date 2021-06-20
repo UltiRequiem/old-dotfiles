@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Depends on: amixer, libnotify
 case "$1" in
     "up")   amixer -q sset Master 5%+ ;;
     "+")    amixer -q sset Master 5%+ ;;
