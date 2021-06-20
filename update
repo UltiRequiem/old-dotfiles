@@ -24,7 +24,7 @@ def update_files(list_of_files, list_of_destination):
     for i in range(len(list_of_files)):
         print(f"Copying {list_of_files[i]} on {list_of_destination[i]}")
         system(f"cp -r {list_of_files[i]} {list_of_destination[i]}")
-    print("Done!")
+    print("Done! \n")
 
 
 def update_git():
