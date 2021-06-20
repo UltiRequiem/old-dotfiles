@@ -6,10 +6,10 @@ files = {
     "~/bin/*": "./bin/",
     "~/.zshrc": "./zshrc",
     "~/.xinitrc": "./xinitrc",
-    "~/.vim/*": "./vim/*",
+    "~/.vim/*": "./vim/",
     "~/.gitconfig": "./gitconfig",
     "~/.tmux.conf": "./tmux.conf",
-    "~/.config/i3/": "./config/i3/*",
+    "~/.config/i3/": "./config/i3/",
 }
 
 
