@@ -10,6 +10,7 @@ files = {
     "~/.gitconfig": "./gitconfig",
     "~/.tmux.conf": "./tmux.conf",
     "~/.config/i3/*": "./config/i3/",
+    "~/.config/neofetch/*": "./config/neofetch/",
 }
 
 
