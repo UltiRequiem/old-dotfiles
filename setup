@@ -1,5 +1,7 @@
 #!/bin/python
 
+# Not ready yet
+
 from os import system
 
 dependencyes = [

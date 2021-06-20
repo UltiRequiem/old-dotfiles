@@ -1,6 +1,5 @@
 " This is not my normal config, you can check all my config in https://github.com/UltiRequiem/UltiVim.
 
-" Needed
 set nocompatible fileformat=unix 
 syntax on
 
@@ -36,5 +35,3 @@ let g:netrw_winsize = 12
 
 let mapleader = " "
 noremap <leader>e :Lex<CR>
-
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
