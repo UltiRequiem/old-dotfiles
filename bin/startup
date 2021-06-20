@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Compositor
+picom -b -f
+
+# Get Wallpaper
+~/bin/random_wallpaper
+
+# Terminal Emulator
+alacritty --command navi
