@@ -1,0 +1,25 @@
+#!/bin/python
+
+import os
+
+PRINCIPAL_MONITOR = os.popen("xrandr --query | grep primary").read().split()[0]
+
+
+class Monitor:
+    def __init__(self, name, side):
+        self.name = name
+        self.side = side
+
+    def is_conected(self) -> bool:
+        return "connected" in os.popen(f"xrandr --query | grep {self.name}").read()
+
+    def activate(self) -> None:
+        os.system(
+            f"xrandr --output {self.name} --auto --{self.side}-of {PRINCIPAL_MONITOR}"
+        )
+
+
+if __name__ == "__main__":
+    my_second_monitor = Monitor("HDMI-1", "right")
+    if my_second_monitor.is_conected():
+        my_second_monitor.activate()

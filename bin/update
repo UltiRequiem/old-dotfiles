@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+# Arch
+pacman -Syu --noconfirm
+
+# NPM
+npm update -g --force
