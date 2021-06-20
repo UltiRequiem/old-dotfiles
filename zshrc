@@ -3,10 +3,9 @@ export ZSH="/home/mirai/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 export PATH=$PATH:~/bin
+he
 
 ZSH_THEME="robbyrussell"
-
-export PATH=$PATH:~/scripts
 
 HYPHEN_INSENSITIVE="true"
 
