@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-
-const NOW = new Date();
-
-console.log(`${NOW.toLocaleDateString()} ${NOW.toLocaleTimeString()}`);
