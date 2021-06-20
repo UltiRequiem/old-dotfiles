@@ -1,37 +1,37 @@
 #!/bin/python
 
-from os import listxattr, system
-from datetime import date
+from os import system
 
-list_of_files = [
-    "~/bin/*",
-    "~/.zshrc",
-    "~/.xinitrc",
-    "~/.vim/*",
-    "~/.gitconfig",
-    "~/.tmux.conf",
-]
+files = {
+    "~/bin/*": "./bin/",
+    "~/.zshrc": "./zshrc",
+    "~/.xinitrc": "./xinitrc",
+    "~/.vim/*": "./vim/*",
+    "~/.gitconfig": "./gitconfig",
+    "~/.tmux.conf": "./tmux.conf",
+}
 
-list_of_destination = [
-    "bin/",
-    "./zshrc",
-    "./xinitrc",
-    "vim/",
-    "./gitconfig",
-    "./tmux.conf",
-]
+
+def get_keys(dictionary):
+    return [key for key in dictionary.keys()]
+
+
+def get_values(dictionary):
+    return [val for val in dictionary.values()]
 
 
 def update_files(list_of_files, list_of_destination):
     for i in range(len(list_of_files)):
-        system(f"cp {list_of_files[i]} {list_of_destination[i]} -r")
+        print(f"Copying {list_of_files[i]} on {list_of_destination[i]}")
+        system(f"cp -r {list_of_files[i]} {list_of_destination[i]}")
+    print("Done!")
 
 
 def update_git():
-    system(f"git add . && git commit -m '🚀 Update {date.today()}'")
+    system(f"git add . && git commit -m '🚀 Update'")
     system("git push")
 
 
 if __name__ == "__main__":
-    update_files(list_of_files, list_of_destination)
+    update_files(get_keys(files), get_values(files))
     update_git()

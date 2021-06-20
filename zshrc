@@ -20,9 +20,7 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(
 	git
 	zsh-z
-        zsh-syntax-highlighting
         zsh-autosuggestions
-        command-not-found
 )
 
 export LANG=en_US.UTF-8
