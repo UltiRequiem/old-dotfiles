@@ -5,3 +5,5 @@ pacman -Syu --noconfirm
 
 # NPM
 npm update -g --force
+
+nvim -u NONE -c "CocUpdate" -c -q

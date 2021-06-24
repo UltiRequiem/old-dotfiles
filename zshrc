@@ -20,6 +20,7 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(
 	git
 	zsh-z
+        zsh-syntax-highlighting
         zsh-autosuggestions
 )
 

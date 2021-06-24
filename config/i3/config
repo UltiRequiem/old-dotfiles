@@ -90,6 +90,20 @@ bindsym $mod+r mode "resize"
 ######################################
 
 
+mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff" {
+        bindsym r exec --no-startup-id systemctl reboot
+        bindsym s exec --no-startup-id systemctl suspend; mode "default"
+        bindsym l exit
+        bindsym p exec --no-startup-id systemctl poweroff
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+e mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff"
+
+
 ########## Bumblebee Status ##########
 bar {
     font pango:JetBrains Mono 9
@@ -117,7 +131,6 @@ bar {
 
 # No Tittles: Important for Gaps
 for_window [class="^.*"] border pixel 3
-for_window [class="zoom"] floating enable
 
 # Gaps
 gaps outer 6

@@ -43,3 +43,5 @@
 [user]
 	name = Eliaz Bobadilla
 	email = eliaz.bobadilladev@gmail.com
+[pull]
+	rebase = true

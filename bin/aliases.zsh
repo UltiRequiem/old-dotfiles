@@ -6,12 +6,16 @@ alias pyva="python3.10 -m venv env;source env/bin/activate"
 alias pyv="source env/bin/activate"
 
 alias v="nvim"
-alias va="nvim ."
+alias vf='nvim $(fzf)'
 
 alias vi="vim"
 
-alias rp='cd ~/disk/Repos'
-alias dl="cd ~/downloads"
+alias please='sudo $(fc -ln -1)'
+
+alias te='cd $(mktemp -d)'
+
+alias rp='cd ~/disk/Repos; ls'
+alias dl="cd ~/Downloads; ls"
 
 alias f="ranger"
 alias l="lsd -l"
