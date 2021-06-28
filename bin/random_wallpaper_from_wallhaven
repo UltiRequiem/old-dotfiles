@@ -1,16 +1,16 @@
 #!/usr/bin/python
 
-import os
+from os import system, path, getcwd
 from random import choice
 from requests import get
 
 #####################################
-monitor_long = 1600
-monitor_height = 900
-topic = "anime"
+MONITOR_LONG = 1600
+MONITOR_HEIGHT = 900
+TOPIC = "anime"
 #####################################
 
-URL = f"https://wallhaven.cc/api/v1/search?q={topic}&atleast={monitor_long}x{monitor_height}&sorting=random"
+URL = f"https://wallhaven.cc/api/v1/search?q={TOPIC}&atleast={MONITOR_LONG}x{MONITOR_HEIGHT}"
 FILE_NAME = "random.jpg"
 
 
@@ -30,9 +30,9 @@ def select_image(json: dict) -> str:
     return json["data"][choice(range(0, len(json["data"])))]["path"]
 
 
-def setup(pathtofile) -> None:
+def setup(path_to_file) -> None:
     """Setup Image with feh"""
-    os.system(f"feh --bg-fill {os.path.join(os.getcwd(), pathtofile)}")
+    system(f"feh --bg-fill {path.join(getcwd(), path_to_file)}")
 
 
 if __name__ == "__main__":
