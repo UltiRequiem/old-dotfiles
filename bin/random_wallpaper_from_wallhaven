@@ -10,42 +10,35 @@ monitor_height = 900
 topic = "anime"
 #####################################
 
-url = f"https://wallhaven.cc/api/v1/search?q={topic}&atleast={monitor_long}x{monitor_height}&sorting=random"
-file_name = "random.jpg"
+URL = f"https://wallhaven.cc/api/v1/search?q={topic}&atleast={monitor_long}x{monitor_height}&sorting=random"
+FILE_NAME = "random.jpg"
 
 
 def download(url, file_name) -> None:
+    """Download the image"""
     with open(file_name, "wb") as file:
-        response = get(url)
-        file.write(response.content)
+        file.write(get(url).content)
 
 
 def get_image_link(json_url: str) -> str:
-    """get_image_link.
-    :param json_url:
-    :type json_url: str
-    """
-    json = get(json_url).json()
-    return select_image(json)
+    """Get the url of the selected image"""
+    return select_image(get(json_url).json())
 
 
-def select_image(json) -> str:
-    """select_image.
-    :param json:
-    """
+def select_image(json: dict) -> str:
+    """Select an image"""
     return json["data"][choice(range(0, len(json["data"])))]["path"]
 
 
 def setup(pathtofile) -> None:
-    name_of_file = pathtofile
-    path_to_file = os.path.join(os.getcwd(), name_of_file)
-    os.system(f"feh --bg-fill {path_to_file}")
+    """Setup Image with feh"""
+    os.system(f"feh --bg-fill {os.path.join(os.getcwd(), pathtofile)}")
 
 
 if __name__ == "__main__":
     try:
-        download(get_image_link(url), file_name)
-        setup(file_name)
+        download(get_image_link(URL), FILE_NAME)
+        setup(FILE_NAME)
     except Exception as exception:
         print(f"Oops!, {exception} ocurred.")
 

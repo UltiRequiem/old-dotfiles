@@ -45,3 +45,7 @@
 	email = eliaz.bobadilladev@gmail.com
 [pull]
 	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
