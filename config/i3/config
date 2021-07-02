@@ -13,6 +13,8 @@ bindsym $mod+o exec --no-startup-id rofi -show run
 bindsym $mod+Shift+x exec ~/bin/dchoice "Do you want to shutdown?" "shutdown -h now"
 ######################################
 
+bindsym $mod+Tab exec "rofi -show combi run,window"
+
 # Lock the scren
 bindsym $mod+p exec ~/bin/lock
 
