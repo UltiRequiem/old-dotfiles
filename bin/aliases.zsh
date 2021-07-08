@@ -15,7 +15,7 @@ alias please='sudo $(fc -ln -1)'
 alias te='cd $(mktemp -d)'
 
 alias rp='cd ~/disk/Repos; ls'
-alias dl="cd ~/Downloads; ls"
+alias dl="cd ~/Downloads; ls;ranger"
 
 alias f="ranger"
 alias l="lsd -l"

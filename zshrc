@@ -22,6 +22,7 @@ plugins=(
 	zsh-z
         zsh-syntax-highlighting
         zsh-autosuggestions
+        zsh-better-npm-completion
 )
 
 export LANG=en_US.UTF-8
