@@ -1,5 +1,10 @@
 #!/bin/python
 
+"""
+This works, but is horrible.
+TODO: Work on this
+"""
+
 from os import system
 
 files = {
@@ -15,11 +20,11 @@ files = {
 
 
 def get_keys(dictionary):
-    return [key for key in dictionary.keys()]
+    return (key for key in dictionary.keys())
 
 
 def get_values(dictionary):
-    return [val for val in dictionary.values()]
+    return (val for val in dictionary.values())
 
 
 def update_files(list_of_files, list_of_destination):
