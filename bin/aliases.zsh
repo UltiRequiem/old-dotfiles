@@ -6,6 +6,7 @@ alias pyva="python3.10 -m venv env;source env/bin/activate"
 alias pyv="source env/bin/activate"
 
 alias v="nvim"
+alias vn="nvim -u 'NONE'"
 alias vf='nvim $(fzf)'
 
 alias vi="vim"

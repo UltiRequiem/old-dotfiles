@@ -18,8 +18,7 @@ class Monitor:
 
 def activate_all_monitors(monitors: list | tuple):
     for monitor in monitors:
-        if monitor.is_conected():
-            monitor.activate()
+        if monitor.is_conected(): monitor.activate()
 
 
 if __name__ == "__main__":
