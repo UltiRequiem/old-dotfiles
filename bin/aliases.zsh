@@ -7,11 +7,13 @@ alias pyv="source env/bin/activate"
 
 alias v="nvim"
 alias vn="nvim -u 'NONE'"
-alias vf='nvim $(fzf)'
+alias vf='nvim $(fiu)'
 
 alias vi="vim"
 
 alias please='sudo $(fc -ln -1)'
+
+alias fiu="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias te='cd $(mktemp -d)'
 
@@ -25,3 +27,4 @@ alias tree="lsd --tree"
 alias ls="lsd"
 
 alias reload="exec ${SHELL} -l"
+alias pb="pkill brave"
