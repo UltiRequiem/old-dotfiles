@@ -1,4 +1,4 @@
-alias qq="exit"
+alias q="exit"
 
 alias py='python3.10'
 alias pyvenv='python3.10 -m venv env;source env/bin/activate'
@@ -15,10 +15,16 @@ alias please='sudo $(fc -ln -1)'
 
 alias fiu="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
+alias bf='bat $(fzf)'
+
 alias te='cd $(mktemp -d)'
 
 alias rp='cd ~/disk/Repos; ls'
 alias dl="cd ~/Downloads; ls;ranger"
+
+
+alias gob="go build *.go"
+alias gor="go run *.go"
 
 alias f="ranger"
 alias l="lsd -l"
