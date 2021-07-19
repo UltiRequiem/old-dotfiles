@@ -8,6 +8,3 @@ picom -b -f
 
 # Terminal Emulator
 alacritty
-
-# Browser
-brave
