@@ -4,7 +4,7 @@ from re import search
 from sys import argv
 
 
-def calc(operation,num_one, num_two):
+def calc(operation:str,num_one:int, num_two:int):
     match operation:
         case 'sum':
             return num_one + num_two

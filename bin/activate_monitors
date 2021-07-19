@@ -16,11 +16,17 @@ class Monitor:
         system(f"xrandr --output {self.name} --auto --{self.side}-of {self.principal}")
 
 
-def activate_all_monitors(monitors: list | tuple):
+def activate_all_monitors(monitors: list | tuple) -> None:
     for monitor in monitors:
-        if monitor.is_conected(): monitor.activate()
+        if monitor.is_conected():
+            monitor.activate()
 
 
 if __name__ == "__main__":
-    MONITORS = (Monitor("HDMI-1", "right"),)
-    activate_all_monitors(MONITORS)
+    activate_all_monitors(
+        (
+            Monitor("HDMI-1", "right"),
+            Monitor("HDMI-2", "left"),
+            Monitor("VGA-0", "left"),
+        )
+    )
