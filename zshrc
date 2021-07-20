@@ -5,8 +5,6 @@ ZSH_THEME="robbyrussell"
 export PATH=$PATH:~/bin
 he
 
-ZSH_THEME="robbyrussell"
-
 HYPHEN_INSENSITIVE="true"
 
 DISABLE_AUTO_UPDATE="true"
@@ -24,10 +22,6 @@ plugins=(
 )
 
 export LANG=en_US.UTF-8
-
-if [[ -n $SSH_CONNECTION ]]; then
-	   export EDITOR='nvim'
-fi
 
 export EDITOR='nvim'
 
