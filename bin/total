@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const fs = require("fs").promises;
+
+async function getTotalFiles(dirPromise) {
+  const files = await dirPromise;
+  return files.length;
+}
+
+async function printFiles() {
+  const totalFiles = await getTotalFiles(fs.readdir(process.cwd()));
+  console.log(`In this directory there are ${totalFiles} files.`);
+}
+
+printFiles()
