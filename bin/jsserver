@@ -1,11 +1,18 @@
 #! /usr/bin/env node
 
+const http = require('http')
+const os = require('os')
+
+const server = http.createServer()
+
 // Math.floor(Math.random() * (max - min) + min)
-const port = Math.floor((Math.random() * (9999 - 1001)) + 1001);
+const PORT = Math.floor((Math.random() * (9999 - 1001)) + 1001);
 
-require("http").createServer((_req, res)=> {
-    res.write(`Hello World. This page is running Node.js version: ${process.version}`);
+server.on('request', (_req,res)=>{
+    res.write(`Hello World. This page is running Node.js version: ${process.version} on ${os.type()}`);
     res.end();
-}).listen(port);
+})
 
-console.log(`Running on http://localhost:${port}`)
+server.listen(PORT)
+
+console.log(`Running on http://localhost:${PORT}`)
