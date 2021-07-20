@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+const os = require("os");
+
+console.log(`${os.type()}: ${os.release()}`);
