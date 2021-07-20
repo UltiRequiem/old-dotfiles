@@ -19,18 +19,14 @@ HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
 	git
-	zsh-z
         zsh-syntax-highlighting
         zsh-autosuggestions
-        zsh-better-npm-completion
 )
 
 export LANG=en_US.UTF-8
 
 if [[ -n $SSH_CONNECTION ]]; then
 	   export EDITOR='nvim'
-else
-    export EDITOR='vim'
 fi
 
 export EDITOR='nvim'
