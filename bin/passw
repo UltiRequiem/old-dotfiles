@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+# frozen_string_literal: true
+
+require 'io/console'
+
+password = IO.console.getpass 'Enter Password: '
+puts "Your password was #{password.length} characters long."

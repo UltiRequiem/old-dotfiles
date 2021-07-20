@@ -1,0 +1,6 @@
+#!/usr/bin/ruby
+
+# frozen_string_literal: true
+
+print 'Enter something: '
+puts "Uppercased: #{gets.chomp.upcase}"
