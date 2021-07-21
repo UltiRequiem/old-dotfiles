@@ -24,8 +24,8 @@ function cp(fileToCopy, whereToCopy) {
 }
 
 function update_files(listOfFiles, listOfDestination) {
-  for (let i = 0; i > listOfDestination.length; i++) {
-    cp(listOfFiles, listOfDestination);
+  for (let i = 0; i < listOfDestination.length; i++) {
+    cp(listOfFiles[i], listOfDestination[i]);
   }
 }
 
