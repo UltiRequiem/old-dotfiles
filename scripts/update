@@ -29,6 +29,7 @@ function update_files(listOfFiles, listOfDestination) {
 
 function updateGit() {
   exec("git add . && git commit -m '🚀 Update' && git push");
+  console.log("Deployed!");
 }
 
 function init() {

@@ -1,20 +1,10 @@
 let mapleader=" "
 
-set surround
-set multiple-cursors
-set commentary
-set argtextobj
-set easymotion
-set textobj-entire
-set ReplaceWithRegister
+set surround multiple-cursors commentary argtextobj easymotion textobj-entire  ReplaceWithRegister
 
 let g:argtextobj_pairs="[:],(:),<:>"
 
-set showmode
-set so=5
-set incsearch
-set number
-set relativenumber
+set showmode so=5 incsearch number relativenumber
 
 nnoremap <c-s> :w<CR>
 nnoremap <Leader>w :w<CR>
@@ -26,9 +16,7 @@ nnoremap <c-p> :n<CR>
 
 nnoremap tt :t.<CR>
 
-set ideajoin
-set ideastatusicon=gray
-set idearefactormode=keep
+set ideajoin ideastatusicon=gray idearefactormode=keep
 
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)
