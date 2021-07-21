@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const fs = require("fs").promises;
+
+async function format(file) {
+  if (!file) throw new Error("You have to pass a file!");
+}
+
+async function init() {
+  await format(process.argv[1]);
+  console.log("Done!");
+}
+
+init();
