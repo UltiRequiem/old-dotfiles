@@ -5,15 +5,15 @@ const { exec } = require("child_process");
 const { resolve } = require("path");
 
 const FILES = {
-  "~/bin/*": "./bin/",
+  "~/bin/": "./bin/",
   "~/.zshrc": "./zshrc",
   "~/.xinitrc": "./xinitrc",
   "~/.ideavimrc": "./ideavimrc.vim",
   "~/.vim/vimrc": "./vimrc",
   "~/.gitconfig": "./gitconfig",
   "~/.tmux.conf": "./tmux.conf",
-  "~/.config/i3/*": "./config/i3/",
-  "~/.config/neofetch/*": "./config/neofetch/",
+  "~/.config/i3/": "./config/i3/",
+  "~/.config/neofetch/": "./config/neofetch/",
 };
 
 function cp(fileToCopy, whereToCopy) {
