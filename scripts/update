@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const { exec } = require("child_process");
+
+const FILES = {
+  "~/bin/*": "./bin/",
+  "~/.zshrc": "./zshrc",
+  "~/.xinitrc": "./xinitrc",
+  "~/.ideavimrc": "./ideavimrc.vim",
+  "~/.vim/vimrc": "./vimrc",
+  "~/.gitconfig": "./gitconfig",
+  "~/.tmux.conf": "./tmux.conf",
+  "~/.config/i3/*": "./config/i3/",
+  "~/.config/neofetch/*": "./config/neofetch/",
+};
+
+function cp(fileToCopy, whereToCopy) {
+  fs.copyFile(fileToCopy, whereToCopy, (err) => {
+    err ? console.error(err) : console.log(`Copying ${fileToCopy}...`);
+  });
+}
+
+function update_files(listOfFiles, listOfDestination) {
+  for (let i = 0; i > Object.keys(FILES).length; i++) {
+    cp(listOfFiles, listOfDestination);
+  }
+}
+
+function updateGit() {
+  exec("git add . && git commit -m '🚀 Update' && git push");
+}
+
+function init() {
+  update_files(Object.keys(FILES), Object.values(FILES));
+  updateGit();
+}
+
+init();
