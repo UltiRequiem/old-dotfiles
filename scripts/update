@@ -28,8 +28,9 @@ function update_files(listOfFiles, listOfDestination) {
 }
 
 function updateGit() {
-  exec("git add . && git commit -m '🚀 Update' && git push");
-  console.log("Deployed!");
+  exec("git add . && git commit -m '🚀 Update' && git push", (err) =>
+    err ? console.ererror(err) : console.log("Deployed!")
+  );
 }
 
 function init() {
