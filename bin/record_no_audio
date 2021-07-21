@@ -1,3 +1,5 @@
-#!/usr/bin/sh
+#!/usr/bin/python
 
-ffmpeg -f x11grab -s 1366x768 -i :0.0 output.mp4
+from os import system
+
+system("ffmpeg -f x11grab -s 1366x768 -i :0.0 output.mp4")

@@ -1,3 +1,8 @@
-#!/bin/sh
+#!/usr/bin/python
 
-curl -F"file=@$1" https://0x0.st
+from sys import argv
+from os import system
+
+if __name__ == "__main__":
+    print(f"Uploading {argv[0]}...")
+    system(f"curl -F'file=@{argv[0]}' https://0x0.st")

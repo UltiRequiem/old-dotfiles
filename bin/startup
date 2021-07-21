@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/python
+
+from os import system
 
 # Compositor
-picom -b -f
+system("picom -b -f")
 
 # Get Wallpaper
-~/bin/random_wallpaper
+system("source ~/bin/random_wallpaper")
 
 # Terminal Emulator
-alacritty
+system("alacritty")
