@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
+const { copyFile } = require("fs");
 const { exec } = require("child_process");
+const { resolve } = require("path");
 
 const FILES = {
   "~/bin/*": "./bin/",
@@ -16,7 +17,7 @@ const FILES = {
 };
 
 function cp(fileToCopy, whereToCopy) {
-  fs.copyFile(fileToCopy, whereToCopy, (err) => {
+  copyFile(fileToCopy.replace("~", process.env.HOME), whereToCopy, (err) => {
     err ? console.error(err) : console.log(`Copying ${fileToCopy}...`);
   });
 }
