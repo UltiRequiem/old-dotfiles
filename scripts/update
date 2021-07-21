@@ -4,8 +4,8 @@ const { copyFile } = require("fs");
 const { exec } = require("child_process");
 
 const FILES = {
-  "~/.zshrc": "./zshrc",
-  "~/.xinitrc": "./xinitrc",
+  "~/.zshrc": "./.zshrc",
+  "~/.xinitrc": "./.xinitrc",
   "~/.ideavimrc": "./.ideavimrc.vim",
   "~/.vim/vimrc": "./.vimrc",
   "~/.gitconfig": "./.gitconfig",
