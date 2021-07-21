@@ -17,8 +17,9 @@ const FILES = {
 };
 
 function cp(fileToCopy, whereToCopy) {
+  console.log(`Copying ${fileToCopy}...`);
   copyFile(fileToCopy.replace("~", process.env.HOME), whereToCopy, (err) => {
-    err ? console.error(err) : console.log(`Copying ${fileToCopy}...`);
+    err ? console.error(err) : console.log(`Finish copying ${fileToCopy} :)`);
   });
 }
 
