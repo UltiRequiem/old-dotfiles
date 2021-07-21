@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { copyFile } = require("fs");
+const { copyFile, readdir } = require("fs");
 const { exec } = require("child_process");
 
 const FILES = {
@@ -17,7 +17,7 @@ const FILES = {
   "~/.config/wallger/config.json": "./config/wallger/config.json",
 };
 
-function cp(fileToCopy, whereToCopy) {
+function cpFIles(fileToCopy, whereToCopy) {
   console.log(`Copying ${fileToCopy}...`);
   copyFile(fileToCopy.replace("~", process.env.HOME), whereToCopy, (err) => {
     err ? console.error(err) : console.log(`Finish copying ${fileToCopy} :)`);
@@ -26,7 +26,7 @@ function cp(fileToCopy, whereToCopy) {
 
 function update_files(listOfFiles, listOfDestination) {
   for (let i = 0; i < listOfDestination.length; i++) {
-    cp(listOfFiles[i], listOfDestination[i]);
+    cpFIles(listOfFiles[i], listOfDestination[i]);
   }
 }
 
