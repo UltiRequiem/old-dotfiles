@@ -11,7 +11,10 @@ const FILES = {
   "~/.gitconfig": "./.gitconfig",
   "~/.tmux.conf": "./.tmux.conf",
   "~/.config/i3/config": "./config/i3/config",
+  "~/.config/alacritty/alacritty.yml": "./config/alacritty/alacritty.yml",
+  "~/.config/efm-langserver/config.yaml": "./config/efm-langserver/config.yml",
   "~/.config/neofetch/config.conf": "./config/neofetch/config.conf",
+  "~/.config/wallger/config.json": "./config/wallger/config.json",
 };
 
 function cp(fileToCopy, whereToCopy) {
