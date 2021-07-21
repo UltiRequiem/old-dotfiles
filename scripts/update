@@ -2,15 +2,14 @@
 
 const { copyFile } = require("fs");
 const { exec } = require("child_process");
-const { resolve } = require("path");
 
 const FILES = {
   "~/.zshrc": "./zshrc",
   "~/.xinitrc": "./xinitrc",
-  "~/.ideavimrc": "./ideavimrc.vim",
-  "~/.vim/vimrc": "./vimrc",
-  "~/.gitconfig": "./gitconfig",
-  "~/.tmux.conf": "./tmux.conf",
+  "~/.ideavimrc": "./.ideavimrc.vim",
+  "~/.vim/vimrc": "./.vimrc",
+  "~/.gitconfig": "./.gitconfig",
+  "~/.tmux.conf": "./.tmux.conf",
   "~/.config/i3/config": "./config/i3/config",
   "~/.config/neofetch/config.conf": "./config/neofetch/config.conf",
 };
