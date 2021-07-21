@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { copyFile, readdir } = require("fs");
+const { copyFile } = require("fs");
 const { exec } = require("child_process");
 
 const FILES = {
