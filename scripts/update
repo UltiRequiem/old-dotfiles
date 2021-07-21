@@ -17,16 +17,16 @@ const FILES = {
   "~/.config/wallger/config.json": "./config/wallger/config.json",
 };
 
-function cpFIles(fileToCopy, whereToCopy) {
+function cpFiles(fileToCopy, whereToCopy) {
   console.log(`Copying ${fileToCopy}...`);
   copyFile(fileToCopy.replace("~", process.env.HOME), whereToCopy, (err) => {
     err ? console.error(err) : console.log(`Finish copying ${fileToCopy} :)`);
   });
 }
 
-function update_files(listOfFiles, listOfDestination) {
+function updateFiles(listOfFiles, listOfDestination) {
   for (let i = 0; i < listOfDestination.length; i++) {
-    cpFIles(listOfFiles[i], listOfDestination[i]);
+    cpFiles(listOfFiles[i], listOfDestination[i]);
   }
 }
 
@@ -37,7 +37,7 @@ function updateGit() {
 }
 
 function init() {
-  update_files(Object.keys(FILES), Object.values(FILES));
+  updateFiles(Object.keys(FILES), Object.values(FILES));
   updateGit();
 }
 
