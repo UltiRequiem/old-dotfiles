@@ -80,12 +80,12 @@ bindsym $mod+Shift+r restart
 
 ######### Resize Mode Config #########
 mode "resize" {
-        bindsym h resize shrink width 2 px or 2 ppt
-        bindsym j resize grow height 2 px or 2 ppt
-        bindsym k resize shrink height 2 px or 2 ppt
-        bindsym l resize grow width 2 px or 2 ppt
+  bindsym h resize shrink width 2 px or 2 ppt
+    bindsym j resize grow height 2 px or 2 ppt
+    bindsym k resize shrink height 2 px or 2 ppt
+    bindsym l resize grow width 2 px or 2 ppt
 
-        bindsym Escape mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -94,26 +94,26 @@ bindsym $mod+r mode "resize"
 
 ########## Bumblebee Status ##########
 bar {
-    font pango:JetBrains Mono 9
+  font pango:JetBrains Mono 9
 
     status_command /usr/bin/bumblebee-status \
-            -m pasink battery date time \
-            -t onedark-powerline \
-	    -p time.format="%H:%M" date.format="%A %e %b"
+    -m pasink battery date time \
+    -t onedark-powerline \
+    -p time.format="%H:%M" date.format="%A %e %b"
 
     colors {
-	   background #282C34
-	   statusline #ffffff
-	   separator #666666
+      background #282C34
+        statusline #ffffff
+        separator #666666
 
-	   focused_workspace  #C678DD #C678DD #ffffff
-	   active_workspace   #282C34 #ABB2BF #282C34
-	   inactive_workspace #ABB2BF #ABB2BF #282C34
-	   urgent_workspace   #2f343a #900000 #ffffff
-	   binding_mode      #2f343a #900000 #ffffff
+        focused_workspace  #C678DD #C678DD #ffffff
+        active_workspace   #282C34 #ABB2BF #282C34
+        inactive_workspace #ABB2BF #ABB2BF #282C34
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode      #2f343a #900000 #ffffff
     }
 
-    position top   
+  position top   
 }
 ######################################
 

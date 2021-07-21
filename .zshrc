@@ -16,9 +16,9 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
-	git
-        zsh-syntax-highlighting
-        zsh-autosuggestions
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 export LANG=en_US.UTF-8

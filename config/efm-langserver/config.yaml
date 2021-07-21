@@ -1,8 +1,8 @@
 languages:
   vim:
-    lint-command: 'vint -'
+    lint-command: "vint -"
     lint-stdin: true
 
   lua: &lua-lua-format
-    format-command: 'lua-format -i'
+    format-command: "lua-format -i"
     format-stdin: true
