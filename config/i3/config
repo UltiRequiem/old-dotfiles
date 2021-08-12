@@ -2,21 +2,14 @@
 set $mod Mod4
 
 # Exec Terminal Emulator
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # Kill focused window
 bindsym $mod+q kill
 
 ########## dmenu Stuff ############
 bindsym $mod+d exec --no-startup-id dmenu_run -i -p "Which program will you run?"
-bindsym $mod+o exec --no-startup-id rofi -show run
-bindsym $mod+Shift+x exec ~/bin/dchoice "Do you want to shutdown?" "shutdown -h now"
 ######################################
-
-bindsym $mod+Tab exec "rofi -show combi run,window"
-
-# Lock the scren
-bindsym $mod+p exec ~/bin/lock
 
 # Change focus
 bindsym $mod+h focus left
@@ -137,6 +130,3 @@ bindsym Control+Alt+Print exec flameshot screen -c
 # Brighness
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
-
-# On StartUp
-exec ~/bin/startup

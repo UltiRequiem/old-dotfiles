@@ -1,4 +1,9 @@
-export ZSH="/home/mirai/.oh-my-zsh"
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+	exec startx &
+	exit
+fi
+
+export ZSH="/home/zero/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -16,9 +21,9 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
 )
 
 export LANG=en_US.UTF-8
@@ -29,16 +34,9 @@ export ARCHFLAGS="-arch x86_64"
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
+source ~/bin/aliases
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
-
-source ~/bin/aliases.zsh
-
-eval $(thefuck --alias)
-
+# FZF Stuff
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"

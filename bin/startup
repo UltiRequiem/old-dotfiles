@@ -1,12 +1,17 @@
-#!/usr/bin/python
+#!/usr/bin/node
 
-from os import system
+const { exec } = require("child_process");
 
-# Compositor
-system("picom -b -f")
+const COMMANDS = [
+  "picom -b -f",
+  "~/bin/random_wallpaper",
+  "brave",
+];
 
-# Get Wallpaper
-system("source ~/bin/random_wallpaper")
-
-# Terminal Emulator
-system("alacritty")
+COMMANDS.forEach((ele, index) =>
+  exec(ele, (err) =>
+    err
+      ? console.log(`${ele} has failed.`)
+      : console.log(`${index}th has ended.`)
+  )
+);

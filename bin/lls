@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const fs = require("fs/promises");
+
+async function printFiles() {
+  console.log(await fs.readdir(process.cwd()));
+}
+
+printFiles();
