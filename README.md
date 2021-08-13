@@ -1,7 +1,7 @@
 # Zero's Dotfiles
 
 ![GitHub Super-Linter](https://github.com/UltiRequiem/dotfiles/workflows/Lint%20Code%20Base/badge.svg)
-![CodeQL](https://github.com/UltiRequiem/dotfiles/workflows/Analyze/badge.svg)
+![CodeQL](https://github.com/UltiRequiem/dotfiles/workflows/CodeQL/badge.svg)
 ![Repo Size](https://img.shields.io/github/repo-size/ultirequiem/dotfiles?style=flat-square&label=Repo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Lines of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/dotfiles?color=blue&label=Total%20Lines)
