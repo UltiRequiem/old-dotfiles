@@ -1,3 +1,5 @@
+# Moved to [UltiRequiem/home](https://github.com/UltiRequiem/home)
+
 # Zero's Dotfiles
 
 ![CodeQL](https://github.com/UltiRequiem/dotfiles/workflows/CodeQL/badge.svg)
